@@ -55,9 +55,9 @@ variable "log_bucket" {
   description = "The S3 bucket ID to use for the ELB"
 }
 
-variable "ssl_certificate_id" {
-  description = "SSL Certificate ID to use"
-}
+# variable "ssl_certificate_id" {
+#   description = "SSL Certificate ID to use"
+# }
 
 variable "iam_role" {
   description = "IAM Role ARN to use"
@@ -189,7 +189,7 @@ module "elb" {
   internal_zone_id   = "${var.internal_zone_id}"
   security_groups    = "${var.security_groups}"
   log_bucket         = "${var.log_bucket}"
-  ssl_certificate_id = "${var.ssl_certificate_id}"
+#   ssl_certificate_id = "${var.ssl_certificate_id}"
 }
 
 /**
