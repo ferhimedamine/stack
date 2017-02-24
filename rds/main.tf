@@ -153,5 +153,5 @@ resource "aws_db_instance" "main" {
 }
 
 output "addr" {
-  value = "postgres://${aws_db_instance.main.username}:${aws_db_instance.main.password}@${aws_db_instance.main.endpoint}"
+  value = "${var.engine}://${aws_db_instance.main.username}:${aws_db_instance.main.password}@${aws_db_instance.main.endpoint}"
 }
