@@ -14,7 +14,7 @@ variable "engine_version" {
 
 variable "port" {
   description = "Port for database to listen on"
-  default     = 5432
+  default     = 3306
 }
 
 variable "password" {
