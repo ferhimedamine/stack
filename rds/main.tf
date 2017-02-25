@@ -1,15 +1,15 @@
 variable "name" {
-  description = "RDS name and Postgres username"
+  description = "RDS name and db username"
 }
 
 variable "engine" {
   description = "Database engine: mysql, postgres, etc."
-  default     = "postgres"
+  default     = "mysql"
 }
 
 variable "engine_version" {
   description = "Database version"
-  default     = "9.6.1"
+  default     = "5.7"
 }
 
 variable "port" {
