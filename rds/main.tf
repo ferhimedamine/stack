@@ -152,16 +152,16 @@ resource "aws_db_instance" "main" {
   publicly_accessible    = "${var.publicly_accessible}"
 }
 
-output "db_user" {
+output "user" {
   value = "${aws_db_instance.main.username}"
 }
 
 
-output "db_password" {
+output "password" {
   value = "${aws_db_instance.main.password}"
 }
 
-output "db_endpoint" {
+output "endpoint" {
   value = "${aws_db_instance.main.endpoint}"
 }
 
