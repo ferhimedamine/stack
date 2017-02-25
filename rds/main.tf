@@ -161,10 +161,6 @@ output "password" {
   value = "${aws_db_instance.main.password}"
 }
 
-output "endpoint" {
-  value = "${aws_db_instance.main.endpoint}"
-}
-
 output "addr" {
-  value = "${var.engine}://${aws_db_instance.main.username}:${aws_db_instance.main.password}@${aws_db_instance.main.endpoint}"
+  value = "${aws_db_instance.main.endpoint}"
 }
