@@ -152,6 +152,19 @@ resource "aws_db_instance" "main" {
   publicly_accessible    = "${var.publicly_accessible}"
 }
 
+output "db_user" {
+  value = "${aws_db_instance.main.username}"
+}
+
+
+output "db_password" {
+  value = "${aws_db_instance.main.password}"
+}
+
+output "db_endpoint" {
+  value = "${aws_db_instance.main.endpoint}"
+}
+
 output "addr" {
   value = "${var.engine}://${aws_db_instance.main.username}:${aws_db_instance.main.password}@${aws_db_instance.main.endpoint}"
 }
