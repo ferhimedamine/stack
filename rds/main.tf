@@ -156,7 +156,6 @@ output "user" {
   value = "${aws_db_instance.main.username}"
 }
 
-
 output "password" {
   value = "${aws_db_instance.main.password}"
 }
